@@ -6,7 +6,7 @@ import java.rmi.RemoteException;
 public class Client {
     public static void main(String[] args) {
         try {
-            Adder add = (Adder) Naming.lookup("rmi://"+args[0]+"/AddService");
+            Adder add = (Adder) Naming.lookup("//localhost/MyServer");
         System.out.println(add.sum(25,8));
         } catch (RemoteException e) {
             e.printStackTrace();
